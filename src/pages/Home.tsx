@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Code2, GraduationCap, Languages, Mail } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { ReactIcon, ViteIcon, CppIcon, JavaIcon, TypeScriptIcon, AngularIcon, SqlIcon, NodeIcon } from '../components/TechIcons'
 
 export function Home() {
     return (
@@ -99,24 +100,45 @@ export function Home() {
 
                     </motion.div>
 
-                </div>
-            </section>
-
-            <section style={{ marginTop: '6rem' }}>
-                <h2 style={{ fontSize: '2rem', marginBottom: '2rem', textAlign: 'left' }}>Frontend Stack</h2>
-                <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-                    {['React', 'TypeScript', 'Tailwind', 'Vite', 'Node.js', 'Figma'].map(tech => (
-                        <div key={tech} style={{
-                            padding: '1rem 2rem',
-                            backgroundColor: 'var(--bg-secondary)',
-                            border: '1px solid var(--bg-tertiary)',
-                            borderRadius: '12px',
-                            fontWeight: 500,
-                            color: 'var(--text-secondary)'
-                        }}>
-                            {tech}
+                    {/* Tech Stack List - Right Column */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
+                        <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', textAlign: 'left' }}>Tecnologías</h3>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                            {[
+                                { name: 'C++', icon: <CppIcon size={24} color="#659AD2" /> },
+                                { name: 'React', icon: <ReactIcon size={24} color="#61DAFB" /> },
+                                { name: 'Vite', icon: <ViteIcon size={24} color="#BA38FE" /> },
+                                { name: 'Java', icon: <JavaIcon size={24} color="#E76F00" /> },
+                                { name: 'TypeScript', icon: <TypeScriptIcon size={24} color="#3178C6" /> },
+                                { name: 'Angular', icon: <AngularIcon size={24} color="#DD0031" /> },
+                                { name: 'SQL', icon: <SqlIcon size={24} color="#00758F" /> },
+                                { name: 'Node.js', icon: <NodeIcon size={24} color="#339933" /> },
+                            ].map(tech => (
+                                <div key={tech.name} style={{
+                                    padding: '0.8rem 1rem',
+                                    backgroundColor: 'var(--bg-secondary)',
+                                    border: '1px solid var(--bg-tertiary)',
+                                    borderRadius: '12px',
+                                    fontWeight: 500,
+                                    color: 'var(--text-secondary)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '1rem',
+                                    fontSize: '1.1rem'
+                                }}>
+                                    <div style={{ padding: '0.4rem', backgroundColor: 'var(--bg-primary)', borderRadius: '8px', display: 'flex' }}>
+                                        {tech.icon}
+                                    </div>
+                                    <span>{tech.name}</span>
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                    </motion.div>
+
                 </div>
             </section>
         </div>

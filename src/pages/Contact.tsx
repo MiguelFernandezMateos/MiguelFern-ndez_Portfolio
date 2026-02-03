@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { QRCodeSVG } from 'qrcode.react'
 import { Mail, Phone, MapPin, Github } from 'lucide-react'
 
 export function Contact() {
@@ -67,11 +66,14 @@ export function Contact() {
                         borderRadius: '24px',
                         boxShadow: '0 20px 40px rgba(0,0,0,0.2)'
                     }}>
-                        <QRCodeSVG
-                            value={window.location.host} // Point to the root domain
-                            size={300}
-                            bgColor="#ffffff"
-                            fgColor="#000000"
+                        <img
+                            src="/QR.png"
+                            alt="Scan for content"
+                            style={{
+                                width: '300px',
+                                height: '300px',
+                                objectFit: 'contain'
+                            }}
                         />
                         <div style={{ marginTop: '1.5rem', textAlign: 'center', color: 'black', fontWeight: 600 }}>
                             Miguel Fernández
