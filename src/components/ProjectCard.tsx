@@ -8,6 +8,7 @@ interface ProjectCardProps {
     description: string
     tags: string[]
     imageUrl?: string
+    repoUrl: string;
 }
 
 export function ProjectCard({ id, title, description, tags, imageUrl }: ProjectCardProps) {
