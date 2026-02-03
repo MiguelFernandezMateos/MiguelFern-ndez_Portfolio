@@ -29,7 +29,7 @@ export function Home() {
                     }}
                 />
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 0.8fr', gap: '4rem', alignItems: 'center', width: '100%' }}>
+                <div className="responsive-grid hero-reverse-mobile" style={{ display: 'grid', gridTemplateColumns: '1fr 0.8fr', gap: '4rem', alignItems: 'center', width: '100%' }}>
 
                     {/* Text Content */}
                     <motion.div

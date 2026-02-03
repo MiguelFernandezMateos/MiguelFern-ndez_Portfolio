@@ -44,7 +44,7 @@ export function ProjectDetail() {
                     </button>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '4rem' }}>
+                <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '4rem' }}>
                     <div>
                         <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Arquitectura del Sistema</h2>
                         <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', lineHeight: '1.7' }}>

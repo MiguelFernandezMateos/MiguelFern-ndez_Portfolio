@@ -101,3 +101,44 @@ button:focus-visible {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+    .responsive-grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .mobile-nav-toggle {
+        display: flex !important;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .hero-reverse-mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-nav-toggle {
+        display: none !important;
+    }
+
+    .responsive-grid {
+        display: grid;
+        /* default columns set inline or via specific class */
+    }
+}

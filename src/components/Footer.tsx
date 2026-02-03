@@ -13,7 +13,6 @@ export function Footer() {
                 <div style={{ display: 'flex', gap: '1.5rem' }}>
                     <a href="https://github.com/MiguelFernandezMateos" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>GitHub</a>
                     <a href="mailto:miguelfdez0505@gmail.com" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Email</a>
-                    <a href="#" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>LinkedIn</a>
                 </div>
             </div>
         </footer>

@@ -8,14 +8,16 @@ const PROJECTS = [
     title: 'CrossoverX',
     description: 'Aplicación Full Stack desarrollada con Java y TypeScript. Incluye gestión de base de datos SQL y arquitectura moderna de frontend.',
     tags: ['Java', 'TypeScript', 'SQL', 'Full Stack'],
-    repoUrl: 'https://github.com/MiguelFernandezMateos/CrossoverX'
+    repoUrl: 'https://github.com/MiguelFernandezMateos/CrossoverX',
+    imageUrl: 'https://external-preview.redd.it/qW5sXZSe_7w815bbdJh3mwhzBxyEdK13fFyRs3_8ZdQ.jpg?width=640&crop=smart&auto=webp&s=53d250c9db70f2b0fe7a93de0cf57e7f7ffc2a06'
   },
   {
     id: 'ascensor-social',
     title: 'Ascensor Social',
     description: 'Aplicación web progresiva desarrollada con Angular CLI. Enfocada en la accesibilidad y el impacto social.',
     tags: ['Angular', 'TypeScript', 'HTML/CSS'],
-    repoUrl: 'https://github.com/MiguelFernandezMateos/AscensorSocial'
+    repoUrl: 'https://github.com/MiguelFernandezMateos/AscensorSocial',
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7AfUaLEPJJwkMD50ehU31SuBwqNOjAl0KCA&s'
   }
 ]
 
@@ -38,7 +40,7 @@ export function Projects() {
         }}>
           {PROJECTS.map(({ repoUrl, ...project }) => (
             <div key={project.id} style={{ position: 'relative' }}>
-              <ProjectCard {...project} />
+              <ProjectCard {...project} repoUrl={repoUrl} />
               <a
                 href={repoUrl}
                 target="_blank"

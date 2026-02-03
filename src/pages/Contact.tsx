@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
 import { QRCodeSVG } from 'qrcode.react'
-import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react'
+import { Mail, Phone, MapPin, Github } from 'lucide-react'
 
 export function Contact() {
     return (
         <div className="container" style={{ paddingTop: 'calc(var(--header-height) + 4rem)', paddingBottom: '4rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+            <div className="responsive-grid hero-reverse-mobile" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
 
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
@@ -27,6 +27,13 @@ export function Contact() {
                             </div>
                         </a>
 
+                        <a href="https://github.com/MiguelFernandezMateos" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem', backgroundColor: 'var(--bg-secondary)', borderRadius: '12px', border: '1px solid var(--bg-tertiary)' }}>
+                            <Github color="var(--accent-primary)" />
+                            <div>
+                                <div style={{ fontSize: '0.9rem', color: 'var(--text-tertiary)' }}>GitHub</div>
+                                <div style={{ fontWeight: 500 }}>MiguelFernandezMateos</div>
+                            </div>
+                        </a>
                         <a href="tel:+34639096453" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem', backgroundColor: 'var(--bg-secondary)', borderRadius: '12px', border: '1px solid var(--bg-tertiary)' }}>
                             <Phone color="var(--accent-primary)" />
                             <div>
@@ -39,19 +46,13 @@ export function Contact() {
                             <MapPin color="var(--accent-primary)" />
                             <div>
                                 <div style={{ fontSize: '0.9rem', color: 'var(--text-tertiary)' }}>Ubicación</div>
-                                <div style={{ fontWeight: 500 }}>España</div>
+                                <div style={{ fontWeight: 500 }}>Madrid, España</div>
                             </div>
                         </div>
+
+
                     </div>
 
-                    <div style={{ marginTop: '3rem', display: 'flex', gap: '1rem' }}>
-                        <a href="https://github.com/MiguelFernandezMateos" target="_blank" rel="noreferrer" style={{ padding: '0.8rem', backgroundColor: 'var(--bg-tertiary)', borderRadius: '50%' }}>
-                            <Github size={24} />
-                        </a>
-                        <a href="#" style={{ padding: '0.8rem', backgroundColor: 'var(--bg-tertiary)', borderRadius: '50%' }}>
-                            <Linkedin size={24} />
-                        </a>
-                    </div>
                 </motion.div>
 
                 <motion.div

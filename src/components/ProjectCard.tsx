@@ -7,9 +7,10 @@ interface ProjectCardProps {
     title: string
     description: string
     tags: string[]
+    imageUrl?: string
 }
 
-export function ProjectCard({ id, title, description, tags }: ProjectCardProps) {
+export function ProjectCard({ id, title, description, tags, imageUrl }: ProjectCardProps) {
     return (
         <motion.div
             whileHover={{ y: -5 }}
@@ -27,23 +28,24 @@ export function ProjectCard({ id, title, description, tags }: ProjectCardProps) 
                 width: '100%',
                 height: '200px',
                 overflow: 'hidden',
-                background: 'linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+                backgroundColor: 'var(--bg-tertiary)',
+                position: 'relative',
                 borderBottom: '1px solid var(--bg-tertiary)'
             }}>
-                <div style={{
-                    width: '60px',
-                    height: '60px',
-                    borderRadius: '12px',
-                    backgroundColor: 'rgba(255,255,255,0.05)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}>
-                    <span style={{ fontSize: '1.5rem', opacity: 0.5 }}>⚡</span>
-                </div>
+                {imageUrl ? (
+                    <img src={imageUrl} alt={title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                ) : (
+                    <div style={{
+                        width: '100%',
+                        height: '100%',
+                        background: 'linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                    }}>
+                        <span style={{ fontSize: '1.5rem', opacity: 0.5 }}>⚡</span>
+                    </div>
+                )}
             </div>
 
             <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
